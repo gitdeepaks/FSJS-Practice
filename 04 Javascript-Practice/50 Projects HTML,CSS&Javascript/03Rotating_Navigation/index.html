@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+<style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&family=Roboto&display=swap'); */
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #333;
+    color: #222;
+    overflow-x: hidden;
+    margin: 0;   
+
+}
+
+.container {
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear; 
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+
+}
+
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container { 
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+
+.circle {
+    background-color: #FF6263;
+    height:-100px;
+    width: -100px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+
+}
+
+
+.circle button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.container.show-nav .circle {
+    transform:rotate(-70deg);
+}
+
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open{
+    left: 60%;
+}
+
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+
+}
+
+.container.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav {
+    position: fixed ;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 30px;
+}
+
+nav ul li {
+text-transform: uppercase;
+color: #fff;
+margin: 40px 0;
+transform: translateX(-100%);
+transition: 0.4s ease-in;
+
+}
+
+nav ul li i {
+    font-size:  20px;
+    margin-right: 10px;
+
+}
+
+nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+
+
+}
+nav ul li + li +li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+
+}
+
+
+.content img {
+    max-width: 100%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.content small {
+    color: #555;
+    font-style: italic;
+}
+
+.content p{
+    color: #333;
+    line-height: 1.5;
+}
+
+</style>
+
+    <title>Rotating Navigation</title>
+</head>
+<body>
+ 
+    <div class="container show-nav">
+        <div class="circle-container">
+            <button id="close">
+                <i class="fas fa-times"></i>
+            </button>
+            <button id="open">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="content">
+            <h1>Amazing Article</h1>
+            <small>Florin Pop</small>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed at delectus, minima illo, accusamus quae blanditiis tempore odit alias tempora, saepe itaque nulla debitis enim maiores molestias. Consectetur quibusdam vero molestiae aut labore fugit nostrum provident repellat atque facilis beatae quos accusantium nesciunt doloribus a quisquam modi sint placeat esse, fugiat optio! Libero excepturi quo omnis totam expedita veniam mollitia assumenda? Eius quod dolore voluptate illo necessitatibus ad eos culpa reprehenderit quae voluptatum. Hic odio, veritatis eos accusantium explicabo quod, minus illo id tempore iusto in assumenda laudantium alias. Quam suscipit adipisci tenetur amet pariatur voluptatum corporis sit officiis tempore!</p>
+
+            <h3>My Dog</h3>
+            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><i class="fas fa-home"></i>Home</li>
+            <li><i class="fas fa-user-alt"></i>About</li>
+            <li><i class="fas fa-envelope"></i>Contact</li>
+        </ul>
+    </nav>
+    <script src="./script.js"></script>
+</html>
