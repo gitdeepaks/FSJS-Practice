@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      *{
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: gray;
+    font-family: 'Poppins','sans-serif';
+    display:flex;
+    flex-wrap: wrap ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;   
+
+}
+
+.btn{
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-hover {
+  opacity: 0.4;
+}
+
+.btn-focus{
+  outline: none;
+}
+    </style>
+
+    <title>Sound Board</title>
+  </head>
+  <body>
+    <audio id="applause" src="./sounds/applause.mp3"></audio>
+    <audio id="boo" src="./sounds/boo.mp3"></audio>
+    <audio id="gasp" src="./sounds/gasp.mp3"></audio>
+    <audio id="tada" src="./sounds/tada.mp3"></audio>
+    <audio id="victory" src="./sounds/victory.mp3"></audio>
+    <audio id="wrong" src="./sounds/wrong.mp3"></audio>
+
+    <div id="buttons"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
