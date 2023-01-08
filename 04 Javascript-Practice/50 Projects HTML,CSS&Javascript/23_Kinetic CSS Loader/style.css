@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: cornflowerblue;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin:0;   
+
+}
+
+
+.kinetic {
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+
+.kinetic::after, 
+.kinetic::before{
+    content:  '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: azure;
+    animation: rotateA 2s linear infinite 0.9s;
+}
+
+
+.kinetic::before {
+    transform: rotate(90deg);
+    animation: rotaraB 2s linear infinite 0.5s;
+}
+
+@keyframes rotateA {
+    0%, 25% {
+        transform: rotate(0deg);
+    }
+
+    50%, 75%{
+        transform: rotate(180deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+
+@keyframes rotateB {
+    0%, 25% {
+        transform: rotate(90deg);
+    }
+
+    50%, 75%{
+        transform: rotate(270deg);
+    }
+    100% {
+    transform: rotate(450deg);
+    }
+}
