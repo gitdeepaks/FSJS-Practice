@@ -1,0 +1,35 @@
+Important message
+====================
+Hi there,
+
+Reminder to complete all the assignments until React projects and have them submitted on the iNeuron course portal. If you are facing any trouble please connect with the support team, post doubts on discord and have them clarified soon.
+
+
+FSJS 2.0 Home work for 26/3/2023
+====================================
+
+Q. Prepare a high level design DB document using excalidraw/miro for an E-Commerce application and Social media app.
+
+Q. What are keys in DB?
+
+Q. Types of keys
+	- Super key
+	- Candidate key
+	- Primary key
+	- Composite key
+	- Foreign key
+
+Q. With usage of keys that we studied now; Which factor of normalization is addressed?
+
+Q. What is normalization? and types
+	- 1NF
+	- 2NF
+	- 3NF
+	- BCNF
+
+Sections to watch on iNeuron
+==============================
+* Project:- Take it up to Heroku - Production
+
+Note: As of now heroku is a paid platform, please use an alternative like Railway.app, render.com or something that you find better for your learning.
+
