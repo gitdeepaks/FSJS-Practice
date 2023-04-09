@@ -11,4 +11,15 @@ app.listen(port, () => {
 })
 
 
+export const login = asyncHandler(async (req, res) => {
+    const { email, password } = req.body;
 
+    //validation
+
+    if (!email || !password) {
+        throw new CustomError('Please enter a valid email', 400);
+
+    }
+
+}
+)
