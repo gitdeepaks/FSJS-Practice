@@ -23,3 +23,20 @@ export const login = asyncHandler(async (req, res) => {
 
 }
 )
+
+const login = asyncHandler(async (req, res) => {
+
+})
+
+
+const logout = asyncHandler(async (req, res) => {
+    res.cookie("token", null, {
+        expiries: new Date(Date.now()),
+        httpOnly: true
+    })
+
+    res.status(200).json({
+        success: true,
+        message: 'Logged Out'
+    })
+});
